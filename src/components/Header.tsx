@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { asset } from "@/lib/asset";
 
 const NAV_LINKS = [
   { label: "Products", href: "/#products" },
@@ -35,7 +36,9 @@ export default function Header() {
         >
           <Image
             src={
-              isHome ? "/assets/cortex-mark-white.png" : "/assets/cortex-mark.png"
+              isHome
+                ? asset("/assets/cortex-mark-white.png")
+                : asset("/assets/cortex-mark.png")
             }
             alt="Cortex Innovative Solutions"
             width={30}

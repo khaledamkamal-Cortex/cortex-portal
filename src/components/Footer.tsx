@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { asset } from "@/lib/asset";
 
 export default function Footer() {
   return (
@@ -9,7 +10,7 @@ export default function Footer() {
           <div className="max-w-[34ch]">
             <div className="mb-[15px] flex items-center gap-3">
               <Image
-                src="/assets/cortex-mark-white.png"
+                src={asset("/assets/cortex-mark-white.png")}
                 alt="Cortex Innovative Solutions"
                 width={30}
                 height={30}

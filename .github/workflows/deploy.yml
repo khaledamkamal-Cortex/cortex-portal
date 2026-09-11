@@ -24,12 +24,12 @@ jobs:
           node-version: 22
           cache: npm
       - uses: actions/configure-pages@v5
-        with:
-          # Injects the repo basePath and disables image optimization for export
-          static_site_generator: next
-          enablement: true
       - run: npm ci
       - run: npm run build
+        env:
+          # Repo subpath the Pages site is served from; consumed by
+          # next.config.ts (basePath) and src/lib/asset.ts.
+          NEXT_PUBLIC_BASE_PATH: /cortex-portal
       - uses: actions/upload-pages-artifact@v3
         with:
           path: out

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { asset } from "@/lib/asset";
 
 const CAPABILITIES = [
   {
@@ -150,7 +151,7 @@ export default function Home() {
           <div className="animate-drift-29 absolute top-[54%] left-[46%] h-[320px] w-[320px] rounded-full bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,.26),rgba(255,255,255,0)_66%)]" />
         </div>
         <Image
-          src="/assets/cortex-mark-white.png"
+          src={asset("/assets/cortex-mark-white.png")}
           alt=""
           width={720}
           height={720}
@@ -377,7 +378,7 @@ export default function Home() {
       {/* Measures band */}
       <section className="relative overflow-hidden bg-ink">
         <Image
-          src="/assets/cortex-mark-white.png"
+          src={asset("/assets/cortex-mark-white.png")}
           alt=""
           width={520}
           height={520}
