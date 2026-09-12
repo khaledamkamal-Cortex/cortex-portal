@@ -217,12 +217,12 @@ export default function Home() {
                 Precision diagnostic ordering, tracked from requisition to
                 report.
               </div>
-              <a
-                href="https://syncdx.app/"
+              <Link
+                href="/syncdx"
                 className="font-display text-[12.5px] font-bold text-secondary hover:text-secondary-hover"
               >
-                Open platform →
-              </a>
+                See the platform →
+              </Link>
             </div>
             <div className="text-center">
               <div className="mx-auto mb-5 grid h-[70px] w-[70px] place-items-center rounded-full bg-secondary shadow-[0_0_0_8px_#fff]">
@@ -238,12 +238,12 @@ export default function Home() {
                 Protocols, dosing, calculators and radiotherapy guidance in one
                 reference.
               </div>
-              <a
-                href="https://www.oncotools.app/"
+              <Link
+                href="/oncotools"
                 className="font-display text-[12.5px] font-bold text-secondary hover:text-secondary-hover"
               >
-                Open platform →
-              </a>
+                See the platform →
+              </Link>
             </div>
             <div className="text-center">
               <div className="mx-auto mb-5 grid h-[70px] w-[70px] place-items-center rounded-full bg-tertiary shadow-[0_0_0_8px_#fff]">
@@ -261,10 +261,10 @@ export default function Home() {
                 is asked.
               </div>
               <Link
-                href="/patient-twins"
+                href="/casesalive"
                 className="font-display text-[12.5px] font-bold text-secondary hover:text-secondary-hover"
               >
-                Try the preview →
+                Meet CasesAlive →
               </Link>
             </div>
             <div className="text-center">

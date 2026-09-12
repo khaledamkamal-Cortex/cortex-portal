@@ -102,9 +102,18 @@ export default function PatientTwins() {
             Educational preview
           </span>
         </div>
-        <p className="mb-[34px] max-w-[64ch] text-base leading-[1.6] text-ink opacity-75">
+        <p className="mb-3 max-w-[64ch] text-base leading-[1.6] text-ink opacity-75">
           The twin answers only what you ask, and releases an investigation only
           when you order it — the way a real history unfolds.
+        </p>
+        <p className="mb-[34px] max-w-[64ch] text-sm leading-[1.6] text-ink opacity-70">
+          This is a two-minute taste. The full product is{" "}
+          <Link
+            href="/casesalive"
+            className="font-semibold text-primary hover:text-secondary"
+          >
+            CasesAlive — the teaching clinic →
+          </Link>
         </p>
         <div className="grid grid-cols-1 items-start gap-6 lg:grid-cols-[minmax(0,1.5fr)_minmax(0,1fr)]">
           {/* Chat panel */}
