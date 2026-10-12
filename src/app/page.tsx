@@ -179,14 +179,14 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            <div className="animate-rise hidden justify-center lg:flex">
+            <div className="animate-rise flex justify-center">
               <Image
                 src={asset("/assets/cortex-logo.png")}
                 alt="Cortex Innovative Solutions logo"
                 width={1200}
                 height={963}
                 priority
-                className="w-full max-w-[400px]"
+                className="w-full max-w-[220px] lg:max-w-[300px]"
               />
             </div>
           </div>
@@ -205,8 +205,8 @@ export default function Home() {
           Each node feeds the next.
         </p>
         <div className="relative">
-          <div className="absolute top-[34px] right-[8%] left-[8%] hidden h-[2px] bg-[linear-gradient(90deg,#2176A8,#3AB795,#A3C6B9,#1D3557)] lg:block" />
-          <div className="relative grid grid-cols-1 gap-[26px] md:grid-cols-2 lg:grid-cols-4">
+          <div className="absolute top-[34px] right-[8%] left-[8%] hidden h-[2px] bg-[linear-gradient(90deg,#2176A8,#3AB795,#3B9CCD,#A3C6B9,#1D3557)] lg:block" />
+          <div className="relative grid grid-cols-1 gap-[26px] md:grid-cols-2 lg:grid-cols-5">
             <div className="text-center">
               <div className="mx-auto mb-5 grid h-[70px] w-[70px] place-items-center rounded-full bg-primary shadow-[0_0_0_8px_#fff]">
                 <NodeIcon stroke="#ffffff">
@@ -251,6 +251,30 @@ export default function Home() {
               </Link>
             </div>
             <div className="text-center">
+              <div className="mx-auto mb-5 grid h-[70px] w-[70px] place-items-center rounded-full bg-primary-bright shadow-[0_0_0_8px_#fff]">
+                <NodeIcon stroke="#ffffff">
+                  <rect x="3" y="4" width="18" height="12" rx="2" />
+                  <path d="M12 16v4M8 20h8" />
+                  <circle cx="8.5" cy="10" r="1.6" />
+                  <circle cx="15.5" cy="10" r="1.6" />
+                  <path d="M10.1 10h3.8" />
+                </NodeIcon>
+              </div>
+              <div className="font-display mb-[9px] text-lg font-bold text-ink">
+                OncoBoard
+              </div>
+              <div className="mb-[14px] text-[13.5px] leading-[1.62] text-ink opacity-[.74]">
+                Tumour-board preparation — the case, the evidence and the
+                decision in one view.
+              </div>
+              <a
+                href="https://oncoboardai.com"
+                className="font-display text-[12.5px] font-bold text-secondary hover:text-secondary-hover"
+              >
+                See the platform →
+              </a>
+            </div>
+            <div className="text-center">
               <div className="mx-auto mb-5 grid h-[70px] w-[70px] place-items-center rounded-full bg-tertiary shadow-[0_0_0_8px_#fff]">
                 <NodeIcon stroke="#1D3557">
                   <circle cx="9" cy="9" r="3.2" />
@@ -259,7 +283,7 @@ export default function Home() {
                 </NodeIcon>
               </div>
               <div className="font-display mb-[9px] text-lg font-bold text-ink">
-                Patient Twins
+                CasesAlive
               </div>
               <div className="mb-[14px] text-[13.5px] leading-[1.62] text-ink opacity-[.74]">
                 A digital patient the trainee interviews — it reveals only what

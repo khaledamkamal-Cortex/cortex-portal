@@ -38,6 +38,12 @@ export default function Footer() {
               >
                 OncoTools
               </Link>
+              <a
+                href="https://oncoboardai.com"
+                className="text-[13px] font-medium text-white/80 hover:text-secondary"
+              >
+                OncoBoard
+              </a>
               <Link
                 href="/casesalive"
                 className="text-[13px] font-medium text-white/80 hover:text-secondary"

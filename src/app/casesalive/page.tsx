@@ -17,7 +17,7 @@ export default function CasesAlive() {
         {
           src: "/assets/screenshots/casesalive.png",
           alt: "CasesAlive teaching clinic landing page",
-          url: "digital-twin-three-kappa.vercel.app",
+          url: "casesalives.com",
           caption:
             "The clinic that never closes — waiting room, consultation room, case review.",
         },
@@ -67,7 +67,7 @@ export default function CasesAlive() {
       ]}
       ctaHeading="Step into the clinic."
       ctaBody="Enter the live teaching clinic, or try the two-minute Patient Twins preview right here in the portal."
-      ctaHref="https://digital-twin-three-kappa.vercel.app/"
+      ctaHref="https://casesalives.com"
       ctaLabel="Enter the clinic →"
       secondaryCta={{ href: "/patient-twins", label: "Try the preview" }}
       footnote="Educational simulation with fictional patients — not clinical guidance."
