@@ -163,7 +163,7 @@ export default function RequestDemo() {
                         className={`cursor-pointer rounded-full border px-4 py-[9px] text-[12.5px] font-semibold transition-colors ${
                           on
                             ? "border-secondary bg-secondary text-white"
-                            : "border-[rgba(0,119,139,.2)] bg-surface-alt text-primary"
+                            : "border-[rgba(33,118,168,.2)] bg-surface-alt text-primary"
                         }`}
                       >
                         {label}

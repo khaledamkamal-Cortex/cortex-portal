@@ -15,19 +15,10 @@ const NAV_LINKS = [
 
 export default function Header() {
   const pathname = usePathname();
-  const isHome = pathname === "/";
   const [open, setOpen] = useState(false);
 
-  const navInk = isHome ? "#ffffff" : "#1D3557";
-
   return (
-    <div
-      className="sticky top-0 z-50 border-b backdrop-blur-[14px] transition-[background] duration-300 ease-in-out"
-      style={{
-        background: isHome ? "rgba(0,119,139,.88)" : "rgba(255,255,255,.92)",
-        borderColor: isHome ? "rgba(255,255,255,.14)" : "rgba(29,53,87,.1)",
-      }}
-    >
+    <div className="sticky top-0 z-50 border-b border-[rgba(29,53,87,.1)] bg-[rgba(255,255,255,.92)] backdrop-blur-[14px]">
       <div className="mx-auto flex max-w-[1240px] items-center justify-between px-5 py-[18px] md:px-10">
         <Link
           href="/"
@@ -35,11 +26,7 @@ export default function Header() {
           onClick={() => setOpen(false)}
         >
           <Image
-            src={
-              isHome
-                ? asset("/assets/cortex-mark-white.png")
-                : asset("/assets/cortex-mark.png")
-            }
+            src={asset("/assets/cortex-mark.png")}
             alt="Cortex Innovative Solutions"
             width={30}
             height={30}
@@ -47,16 +34,10 @@ export default function Header() {
             priority
           />
           <span className="flex flex-col gap-[2px]">
-            <span
-              className="font-display text-[16.5px] leading-none font-extrabold tracking-[.04em]"
-              style={{ color: navInk }}
-            >
+            <span className="font-display text-[16.5px] leading-none font-extrabold tracking-[.04em] text-ink">
               CORTEX
             </span>
-            <span
-              className="text-[8.8px] leading-none font-semibold tracking-[.2em] uppercase opacity-[.72]"
-              style={{ color: navInk }}
-            >
+            <span className="text-[8.8px] leading-none font-semibold tracking-[.2em] uppercase text-ink opacity-[.72]">
               Innovative Solutions
             </span>
           </span>
@@ -68,8 +49,7 @@ export default function Header() {
             <Link
               key={l.href}
               href={l.href}
-              className="font-display text-[13.5px] font-semibold opacity-[.85] hover:opacity-100"
-              style={{ color: navInk }}
+              className="font-display text-[13.5px] font-semibold text-ink opacity-[.85] hover:opacity-100"
             >
               {l.label}
             </Link>
@@ -96,7 +76,7 @@ export default function Header() {
             height="24"
             viewBox="0 0 24 24"
             fill="none"
-            stroke={navInk}
+            stroke="#1D3557"
             strokeWidth="1.8"
             strokeLinecap="round"
           >
@@ -111,19 +91,13 @@ export default function Header() {
 
       {/* Mobile drawer */}
       {open && (
-        <nav
-          className="flex flex-col gap-1 border-t px-5 pt-3 pb-5 md:hidden"
-          style={{
-            borderColor: isHome ? "rgba(255,255,255,.14)" : "rgba(29,53,87,.1)",
-          }}
-        >
+        <nav className="flex flex-col gap-1 border-t border-[rgba(29,53,87,.1)] px-5 pt-3 pb-5 md:hidden">
           {NAV_LINKS.map((l) => (
             <Link
               key={l.href}
               href={l.href}
               onClick={() => setOpen(false)}
-              className="font-display flex min-h-11 items-center text-[15px] font-semibold opacity-[.9]"
-              style={{ color: navInk }}
+              className="font-display flex min-h-11 items-center text-[15px] font-semibold text-ink opacity-[.9]"
             >
               {l.label}
             </Link>

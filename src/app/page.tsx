@@ -143,46 +143,51 @@ function NodeIcon({
 export default function Home() {
   return (
     <div id="top">
-      {/* Hero */}
-      <section className="relative overflow-hidden bg-primary">
-        <div className="pointer-events-none absolute inset-0 opacity-50">
-          <div className="animate-drift-17 absolute -top-[170px] -right-[100px] h-[560px] w-[560px] rounded-full bg-[radial-gradient(circle_at_40%_40%,rgba(58,183,149,.85),rgba(58,183,149,0)_68%)]" />
-          <div className="animate-drift-23 absolute -bottom-[180px] -left-[130px] h-[420px] w-[420px] rounded-full bg-[radial-gradient(circle_at_55%_45%,rgba(163,198,185,.7),rgba(163,198,185,0)_68%)]" />
-          <div className="animate-drift-29 absolute top-[54%] left-[46%] h-[320px] w-[320px] rounded-full bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,.26),rgba(255,255,255,0)_66%)]" />
+      {/* Hero — white ground, colour logo, decorative blobs in the mark's blues */}
+      <section className="relative overflow-hidden border-b border-[rgba(29,53,87,.08)] bg-surface">
+        <div className="pointer-events-none absolute inset-0 opacity-40">
+          <div className="animate-drift-17 absolute -top-[170px] -right-[100px] h-[560px] w-[560px] rounded-full bg-[radial-gradient(circle_at_40%_40%,rgba(59,156,205,.45),rgba(59,156,205,0)_68%)]" />
+          <div className="animate-drift-23 absolute -bottom-[180px] -left-[130px] h-[420px] w-[420px] rounded-full bg-[radial-gradient(circle_at_55%_45%,rgba(33,118,168,.30),rgba(33,118,168,0)_68%)]" />
+          <div className="animate-drift-29 absolute top-[54%] left-[40%] h-[320px] w-[320px] rounded-full bg-[radial-gradient(circle_at_50%_50%,rgba(58,183,149,.18),rgba(58,183,149,0)_66%)]" />
         </div>
-        <Image
-          src={asset("/assets/cortex-mark-white.png")}
-          alt=""
-          width={720}
-          height={720}
-          className="pointer-events-none absolute -right-[100px] -bottom-[170px] w-[720px] opacity-[.13]"
-        />
-        <div className="relative mx-auto max-w-[1240px] px-5 pt-[104px] pb-[116px] md:px-10">
-          <div className="animate-rise max-w-[860px]">
-            <div className="mb-[26px] text-[11.5px] leading-none font-semibold tracking-[.16em] uppercase text-tertiary">
-              Cortex Innovative Solutions
+        <div className="relative mx-auto max-w-[1240px] px-5 pt-[88px] pb-[96px] md:px-10">
+          <div className="grid grid-cols-1 items-center gap-[60px] lg:grid-cols-[minmax(0,1.15fr)_minmax(0,.85fr)]">
+            <div className="animate-rise">
+              <div className="mb-[26px] text-[11.5px] leading-none font-semibold tracking-[.16em] uppercase text-primary">
+                Cortex Innovative Solutions
+              </div>
+              <h1 className="font-display mb-[26px] text-4xl leading-[1.02] font-extrabold tracking-[-.03em] text-ink md:text-5xl lg:text-[64px]">
+                One connected nervous system for cancer care.
+              </h1>
+              <p className="mb-10 max-w-[54ch] text-[19.5px] leading-[1.6] text-ink opacity-[.78]">
+                Diagnostics, decisions and clinical training stop being
+                separate tools. Cortex links them into a single ecosystem — so
+                the signal reaches the clinician while it still matters.
+              </p>
+              <div className="flex flex-wrap items-center gap-[14px]">
+                <Link
+                  href="/request-demo"
+                  className="font-display rounded-lg bg-secondary px-[30px] py-4 text-[15px] font-bold text-on-secondary transition-colors hover:bg-secondary-hover"
+                >
+                  Request a Demo
+                </Link>
+                <Link
+                  href="/patient-twins"
+                  className="font-display rounded-lg border-[1.5px] border-[rgba(29,53,87,.25)] bg-transparent px-7 py-[15px] text-[15px] font-bold text-ink transition-colors hover:border-secondary hover:text-primary"
+                >
+                  Try Patient Twins →
+                </Link>
+              </div>
             </div>
-            <h1 className="font-display mb-[26px] text-4xl leading-[1.02] font-extrabold tracking-[-.03em] text-white md:text-5xl lg:text-[72px]">
-              One connected nervous system for cancer care.
-            </h1>
-            <p className="mb-10 max-w-[54ch] text-[19.5px] leading-[1.6] text-white/84">
-              Diagnostics, decisions and clinical training stop being separate
-              tools. Cortex links them into a single ecosystem — so the signal
-              reaches the clinician while it still matters.
-            </p>
-            <div className="flex flex-wrap items-center gap-[14px]">
-              <Link
-                href="/request-demo"
-                className="font-display rounded-lg bg-secondary px-[30px] py-4 text-[15px] font-bold text-on-secondary transition-colors hover:bg-secondary-hover"
-              >
-                Request a Demo
-              </Link>
-              <Link
-                href="/patient-twins"
-                className="font-display rounded-lg border-[1.5px] border-white/42 bg-transparent px-7 py-[15px] text-[15px] font-bold text-white transition-colors hover:border-white"
-              >
-                Try Patient Twins →
-              </Link>
+            <div className="animate-rise hidden justify-center lg:flex">
+              <Image
+                src={asset("/assets/cortex-logo.png")}
+                alt="Cortex Innovative Solutions logo"
+                width={1200}
+                height={963}
+                priority
+                className="w-full max-w-[400px]"
+              />
             </div>
           </div>
         </div>
@@ -200,7 +205,7 @@ export default function Home() {
           Each node feeds the next.
         </p>
         <div className="relative">
-          <div className="absolute top-[34px] right-[8%] left-[8%] hidden h-[2px] bg-[linear-gradient(90deg,#00778B,#3AB795,#A3C6B9,#1D3557)] lg:block" />
+          <div className="absolute top-[34px] right-[8%] left-[8%] hidden h-[2px] bg-[linear-gradient(90deg,#2176A8,#3AB795,#A3C6B9,#1D3557)] lg:block" />
           <div className="relative grid grid-cols-1 gap-[26px] md:grid-cols-2 lg:grid-cols-4">
             <div className="text-center">
               <div className="mx-auto mb-5 grid h-[70px] w-[70px] place-items-center rounded-full bg-primary shadow-[0_0_0_8px_#fff]">
@@ -310,7 +315,7 @@ export default function Home() {
                 {CHIPS.map((chip) => (
                   <span
                     key={chip}
-                    className="rounded-md bg-[rgba(0,119,139,.09)] px-[13px] py-2 text-xs font-semibold text-primary"
+                    className="rounded-md bg-[rgba(33,118,168,.09)] px-[13px] py-2 text-xs font-semibold text-primary"
                   >
                     {chip}
                   </span>
@@ -329,7 +334,7 @@ export default function Home() {
                       height="18"
                       viewBox="0 0 24 24"
                       fill="none"
-                      stroke="#00778B"
+                      stroke="#2176A8"
                       strokeWidth="1.8"
                       strokeLinecap="round"
                       strokeLinejoin="round"

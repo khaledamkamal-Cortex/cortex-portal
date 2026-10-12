@@ -1,8 +1,10 @@
 @import "tailwindcss";
 
 @theme {
-  /* Colour tokens — design_handoff_cortex_portal/README.md */
-  --color-primary: #00778b;
+  /* Colour tokens — handoff palette, primary re-based on the blue half of
+     the logo mark (client request 2026-10-12) */
+  --color-primary: #2176a8;
+  --color-primary-bright: #3b9ccd;
   --color-secondary: #3ab795;
   --color-secondary-hover: #2fa585;
   --color-tertiary: #a3c6b9;

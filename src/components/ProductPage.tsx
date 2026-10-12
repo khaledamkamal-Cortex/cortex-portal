@@ -82,7 +82,7 @@ export default function ProductPage({
                   height="18"
                   viewBox="0 0 24 24"
                   fill="none"
-                  stroke="#00778B"
+                  stroke="#2176A8"
                   strokeWidth="1.8"
                   strokeLinecap="round"
                   strokeLinejoin="round"

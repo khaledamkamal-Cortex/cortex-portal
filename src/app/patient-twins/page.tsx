@@ -158,7 +158,7 @@ export default function PatientTwins() {
                     key={q.id}
                     type="button"
                     onClick={() => ask(q)}
-                    className="cursor-pointer rounded-full border border-[rgba(0,119,139,.2)] bg-surface-alt px-[15px] py-[9px] text-[12.5px] font-semibold text-primary transition-colors hover:border-secondary hover:bg-secondary hover:text-white"
+                    className="cursor-pointer rounded-full border border-[rgba(33,118,168,.2)] bg-surface-alt px-[15px] py-[9px] text-[12.5px] font-semibold text-primary transition-colors hover:border-secondary hover:bg-secondary hover:text-white"
                   >
                     {q.label}
                   </button>
